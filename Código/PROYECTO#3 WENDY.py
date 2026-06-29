@@ -24,26 +24,81 @@ class Pais:
         self.__ranking_fifa = ranking_fifa
 
 
+# Nombre: fn_codigo_fifa
+# Entradas: Ninguna.
+# Salidas: Devuelve el código FIFA del país.
+# Restricciones: El objeto debe estar inicializado.
     def fn_codigo_fifa(self):
         return self.__codigo_fifa
+
+
+
+
+
+
+# Nombre: fn_nombre
+# Entradas: Ninguna.
+# Salidas: Devuelve el nombre del país.
+# Restricciones: El objeto debe estar inicializado.  
 
     def fn_nombre(self):
         return self.__nombre
 
+
+
+
+# Nombre: fn_ranking_fifa
+# Entradas: Ninguna.
+# Salidas: Devuelve el ranking FIFA del país.
+# Restricciones: El objeto debe estar inicializado.   
+
     def fn_continente(self):
         return self.__continente
+
+
+
+
+
+# Nombre: fn_ranking_fifa
+# Entradas: Ninguna.
+# Salidas: Devuelve el ranking FIFA del país.
+# Restricciones: El objeto debe estar inicializado.
+    
+
+
 
     def fn_ranking_fifa(self):
         return self.__ranking_fifa
 
+# Nombre: fn_cambiar_nombre_pais
+# Entradas: nuevo_nombre (cadena de texto).
+# Salidas: Actualiza el nombre del país.
+# Restricciones: El nuevo nombre no debe estar vacío.
+
     def fn_cambiar_nombre_pais(self,nuevo_nombre):
         self.__nombre=nuevo_nombre
 
-        
+
+
+
+
+# Nombre: fn_mostrar_datos
+# Entradas: Ninguna.
+# Salidas: Devuelve una cadena con los datos del país.
+# Restricciones: El objeto debe contener información válida.        
         
     def fn_mostrar_datos(self):
         return (f"[{self.__codigo_fifa}] {self.__nombre} "f"| Confederación: {self.__continente} "
                 f"| Ranking FIFA: {self.__ranking_fifa}")#fcailidad al guardar yllamar
+
+
+
+
+# Nombre: fn_actualizar_datos
+# Entradas: nombre, continente y ranking_fifa.
+# Salidas: Actualiza los datos del país.
+# Restricciones: El ranking debe ser un entero válido.
+
 
     def fn_actualizar_datos(self,nombre=None,continente=None,ranking_fifa=None):
         if nombre is not None:
@@ -54,6 +109,13 @@ class Pais:
             
         if ranking_fifa is not None:
             self.__ranking_fifa = ranking_fifa
+
+            
+
+# Nombre: fn_para_pasar_archivo
+# Entradas: Ninguna.
+# Salidas: Devuelve una línea de texto lista para guardar en un archivo.
+# Restricciones: Los datos del país deben estar inicializados.           
             
     def fn_para_pasar_archivo(self):#lienea d etexto
         return f"{self.__codigo_fifa},{self.__nombre},{self.__continente},{self.__ranking_fifa}"
@@ -76,24 +138,57 @@ class Persona:
         self.__apellido = apellido
         self.__fecha = fecha_nacimiento
         self.__nacionalidad = nacionalidad
-
+# Nombre: fn_mostrar_nombre_completo
+# Entradas: Ninguna.
+# Salidas: Devuelve el nombre completo de la persona.
+# Restricciones: El objeto debe estar inicializado.
 
     def fn_mostrar_nombre_completo(self):
         return f"{self.__nombre} {self.__apellido}"
 
+
+# Nombre: fn_mostrar_nombre_persona
+# Entradas: Ninguna.
+# Salidas: Devuelve el nombre de la persona.
+# Restricciones: El objeto debe estar inicializado.
+
+
     def fn_mostrar_nombre_persona(self):
         return self.__nombre
+
+
+# Nombre: fn_mostrar_apellido_persona
+# Entradas: Ninguna.
+# Salidas: Devuelve el apellido de la persona.
+# Restricciones: El objeto debe estar inicializado.
     def fn_mostrar_apellido_persona(self):
         return self.__apellido
+
+
+# Nombre: fn_mostrar_fecha_persona
+# Entradas: Ninguna.
+# Salidas: Devuelve la fecha de nacimiento.
+# Restricciones: El objeto debe estar inicializado.
     def fn_mostrar_fecha_persona(self):
         return self.__fecha
+
+
+
+# Nombre: fn_mostrar_nacionalidad
+# Entradas: Ninguna.
+# Salidas: Devuelve la nacionalidad.
+# Restricciones: El objeto debe estar inicializado.
     def fn_mostrar_nacionalidad(self):
         return self.__nacionalidad
+
+
+
+
         
-
-
-
-        
+# Nombre: fn_mostrar_datos
+# Entradas: Ninguna.
+# Salidas: Devuelve una cadena con todos los datos de la persona.
+# Restricciones: Los datos deben existir.
     def fn_mostrar_datos(self):
 
         return (f"{self.__nombre} {self.__apellido} {self.__fecha} {self.__nacionalidad}") #tiene el fin de ser más facil de guardar
@@ -117,19 +212,49 @@ class Entrenador(Persona):
         self.__sistema_juego = sistema_juego
 
 
+
+# Nombre: fn_licencia_entrenador
+# Entradas: Ninguna.
+# Salidas: Devuelve la licencia del entrenador.
+# Restricciones: El objeto debe estar inicializado.
+
+
     def fn_licencia_entrenador(self):
         return self.__licencia
-    
+
+
+# Nombre: fn_experiencia_entrenador
+# Entradas: Ninguna.
+# Salidas: Devuelve los años de experiencia.
+# Restricciones: El objeto debe estar inicializado.
+
     def fn_experiencia_entrenador(self):
         return self.__experiencia
 
+
+# Nombre: fn_juego_entrenador
+# Entradas: Ninguna.
+# Salidas: Devuelve el sistema de juego del entrenador.
+# Restricciones: El objeto debe estar inicializado.
+
     def fn_juego_entrenador(self):
         return self.__sistema_juego
-    
+
+
+# Nombre: fn_mostrar_datos_entrenador
+# Entradas: Ninguna.
+# Salidas: Devuelve una cadena con toda la información del entrenador.
+# Restricciones: Los datos deben existir.    
     def fn_mostrar_datos_entrenador(self):
         datos=super().fn_mostrar_datos()
         return f"{datos} {self.__licencia} {self.__experiencia} {self.__sistema_juego}"
 
+
+
+# Nombre: fn_actualizar_datos
+# Entradas: licencia (texto), experiencia (entero), sistema (texto).
+# Salidas: Actualiza los datos del entrenador.
+# Restricciones: La experiencia debe ser un entero válido.
 
     
     def fn_actualizar_datos(self,licencia=None,experiencia=None,sistema=None):
@@ -142,6 +267,12 @@ class Entrenador(Persona):
         if sistema is not None:
             self.__sistema_juego = sistema
 
+
+            
+# Nombre: fn_calcular_factor_entrenador
+# Entradas: Ninguna.
+# Salidas: Devuelve el factor del entrenador según su experiencia.
+# Restricciones: La experiencia debe ser mayor o igual a cero.
     def fn_calcular_factor_entrenador(self):
         valor= self.__experiencia*4
         if valor>100:
@@ -182,34 +313,100 @@ class Futbolista(Persona):
         self.__estratega     = estratega     if estratega     is not None else random.randint(1, 25)
         self.__dominio_balon = dominio_balon if dominio_balon is not None else random.randint(1, 25)
         self.__fuerza_sub    = fuerza        if fuerza        is not None else random.randint(1, 25)
+
+# Nombre: fn_puntaje_individual
+# Entradas: Ninguna.
+# Salidas: Devuelve el puntaje total del jugador.
+# Restricciones: Los atributos deben estar inicializados.
+
         
     def fn_puntaje_individual(self):
         return ( self.__velocidad +self.__estratega +self.__dominio_balon +self.__fuerza_sub )
+
+# Nombre: fn_dorsal
+# Entradas: Ninguna.
+# Salidas: Devuelve el dorsal del jugador.
+# Restricciones: El objeto debe estar inicializado.
     def fn_dorsal(self):
         return self.__dorsal
+
+
+# Nombre: fn_posicion
+# Entradas: Ninguna.
+# Salidas: Devuelve la posición del jugador.
+# Restricciones: El objeto debe estar inicializado.
+
     def fn_posicion(self):
         return self.__posicion
-    
+
+
+# Nombre: fn_goles
+# Entradas: Ninguna.
+# Salidas: Devuelve la cantidad de goles.
+# Restricciones: El objeto debe estar inicializado.
     def fn_goles(self):
         return self.__goles
+
+
+# Nombre: fn_asistencias
+# Entradas: Ninguna.
+# Salidas: Devuelve la cantidad de asistencias.
+# Restricciones: El objeto debe estar inicializado.
     def fn_asistencias(self):
         return self.__asistencias
+
+
+# Nombre: fn_tarjetas_amarrillas
+# Entradas: Ninguna.
+# Salidas: Devuelve la cantidad de tarjetas amarillas.
+# Restricciones: El objeto debe estar inicializado.
     def fn_tarjetas_amarrillas(self):
         return self.__total_tarjetas_amarrillas
+
+
+# Nombre: fn_tarjetas_rojas
+# Entradas: Ninguna.
+# Salidas: Devuelve la cantidad de tarjetas rojas.
+# Restricciones: El objeto debe estar inicializado.
     def fn_tarjetas_rojas(self):
         return self.__total_tarjetas_rojas
 
+
+# Nombre: fn_velocidad
+# Entradas: Ninguna.
+# Salidas: Devuelve la velocidad del jugador.
+# Restricciones: El objeto debe estar inicializado.
     def fn_velocidad(self):
         return self.__velocidad
+
+# Nombre: fn_estratega
+# Entradas: Ninguna.
+# Salidas: Devuelve el atributo estratega.
+# Restricciones: El objeto debe estar inicializado.
     def fn_estratega(self):
         return self.__estratega
+
+
+# Nombre: fn_dominio_balon
+# Entradas: Ninguna.
+# Salidas: Devuelve el dominio de balón.
+# Restricciones: El objeto debe estar inicializado.
 
     def fn_dominio_balon(self):
         return self.__dominio_balon
 
+# Nombre: fn_fuerza_sub
+# Entradas: Ninguna.
+# Salidas: Devuelve el atributo fuerza.
+# Restricciones: El objeto debe estar inicializado.
+
     def fn_fuerza_sub(self):
         return self.__fuerza_sub
 
+# Nombre: actualizar_datos
+# Entradas: dorsal (entero), posicion (texto), velocidad (entero), estratega (entero), dominio_balon (entero), fuerza (entero).
+# Salidas: Actualiza los datos del futbolista.
+# Restricciones: Los valores deben ser válidos.
 
     def actualizar_datos(self,dorsal=None, posicion=None, velocidad=None, estratega=None, dominio_balon=None, fuerza=None):
         
@@ -227,11 +424,28 @@ class Futbolista(Persona):
         if fuerza        is not None:
             self.__fuerza_sub    = fuerza
 
+
+# Nombre: fn_registrar_gol
+# Entradas: Ninguna.
+# Salidas: Incrementa en uno la cantidad de goles.
+# Restricciones: El objeto debe estar inicializado.
+
     def fn_registrar_gol(self):
         self.__goles+=1
 
+        
+# Nombre: fn_registrar_asistencia
+# Entradas: Ninguna.
+# Salidas: Incrementa en uno la cantidad de asistencias.
+# Restricciones: El objeto debe estar inicializado.
     def fn_registrar_asistencia(self):
         self.__asistencias+=1
+
+
+# Nombre: fn_registrar_tarjeta
+# Entradas: tipo (texto).
+# Salidas: Registra una tarjeta amarilla o roja.
+# Restricciones: El tipo debe ser "amarilla" o "roja".
     def fn_registrar_tarjeta(self,tipo):
         if tipo=="amarilla":
             self.__total_tarjetas_amarrillas +=1
@@ -242,7 +456,10 @@ class Futbolista(Persona):
             
 
 
-
+# Nombre: fn_mostrar_datos_futbolista
+# Entradas: Ninguna.
+# Salidas: Devuelve una cadena con toda la información del futbolista.
+# Restricciones: Los datos del jugador deben existir.
     
     def fn_mostrar_datos_futbolista(self):
         datos_persona = super().fn_mostrar_datos()
@@ -281,41 +498,105 @@ class Seleccion:
         self.__total_tarjetas_amarrillas = 0
         self.__total_tarjetas_rojas = 0
         self.__fuerza_equipo = 0
+
+# Nombre: fn_codigo_equipo
+# Entradas: Ninguna.
+# Salidas: Devuelve el código de la selección.
+# Restricciones: El objeto debe estar inicializado.
         
     def fn_codigo_equipo(self):
         return self.__codigo_equipo
+
+
     
+# Nombre: fn_pais
+# Entradas: Ninguna.
+# Salidas: Devuelve el objeto País asociado.
+# Restricciones: El objeto debe estar inicializado.    
     def fn_pais(self):
         return self.__pais
-    
+
+
+# Nombre: fn_entrenador
+# Entradas: Ninguna.
+# Salidas: Devuelve el entrenador asignado.
+# Restricciones: El objeto debe estar inicializado.
+
     def fn_entrenador(self):
         return self.__entrenador
+
     
+# Nombre: fn_jugadores
+# Entradas: Ninguna.
+# Salidas: Devuelve la lista de jugadores.
+# Restricciones: El objeto debe estar inicializado.
     def fn_jugadores(self):
         return list(self.__jugadores)
-    
+
+
+# Nombre: fn_cantidad_jugadores
+# Entradas: Ninguna.
+# Salidas: Devuelve la cantidad de jugadores registrados.
+# Restricciones: El objeto debe estar inicializado.
     def fn_cantidad_jugadores(self):
         return self.__cantidad_jugadores
-    
+
+
+# Nombre: fn_nombre_del_pais
+# Entradas: Ninguna.
+# Salidas: Devuelve el nombre del país de la selección.
+# Restricciones: Debe existir un país asociado.   
     def fn_nombre_del_pais(self):
         return self.__pais.fn_nombre()#clase pais
-    
+
+
+# Nombre: fn_total_tarjetas_amarillas
+# Entradas: Ninguna.
+# Salidas: Devuelve el total de tarjetas amarillas.
+# Restricciones: El objeto debe estar inicializado.
     def fn_total_tarjetas_amarillas(self):
         return  self.__total_tarjetas_amarrillas
-    
+
+
+# Nombre: fn_total_tarjetas_rojas
+# Entradas: Ninguna.
+# Salidas: Devuelve el total de tarjetas rojas.
+# Restricciones: El objeto debe estar inicializado.
     def fn_total_tarjetas_rojas(self):
         return  self.__total_tarjetas_rojas
-    
+
+
+
+# Nombre: fn_total_goles_favor
+# Entradas: Ninguna.
+# Salidas: Devuelve los goles a favor.
+# Restricciones: El objeto debe estar inicializado.  
     def fn_total_goles_favor(self):
         return self.__total_goles_favor
-    
+
+
+
+# Nombre: fn_total_goles_contra
+# Entradas: Ninguna.
+# Salidas: Devuelve los goles en contra.
+# Restricciones: El objeto debe estar inicializado.
     def fn_total_goles_contra(self):
         return self.__total_goles_contra
 
+
+# Nombre: fn_fuerza_equipo
+# Entradas: Ninguna.
+# Salidas: Devuelve la fuerza del equipo.
+# Restricciones: El objeto debe estar inicializado.
     def fn_fuerza_equipo(self):
         return self.__fuerza_equipo
 
-    
+
+
+# Nombre: fn_mostrar_datos
+# Entradas: Ninguna.
+# Salidas: Devuelve una cadena con la información de la selección.
+# Restricciones: Deben existir los datos de la selección.
     def fn_mostrar_datos(self):
         if self.__entrenador is not None:
             nombre_dt = self.__entrenador.fn_mostrar_nombre_completo()
@@ -335,6 +616,10 @@ class Seleccion:
         return "\n".join(lineas)
 
 
+# Nombre: fn_agregar_jugador
+# Entradas: futbolista (objeto Futbolista).
+# Salidas: Agrega un jugador a la selección.
+# Restricciones: La selección no debe superar los 23 jugadores.
     
     def fn_agregar_jugador(self,futbolista):
         if self.__cantidad_jugadores >= self.MAXIMO_JUGADORES:
@@ -345,7 +630,10 @@ class Seleccion:
         self.__recalcular_fuerza()#creo despues
         return True
 
-
+# Nombre: fn_eliminar_jugador
+# Entradas: dorsal (entero).
+# Salidas: Elimina un jugador de la selección.
+# Restricciones: El dorsal debe existir.
     def fn_eliminar_jugador(self,dorsal):
         lista_nueva=[]
         encontrado=False
@@ -362,10 +650,21 @@ class Seleccion:
             self.__cantidad_jugadores-=1
             self.__recalcular_fuerza()#funcion despues definire
 
+
+# Nombre: fn_asignar_entrenador
+# Entradas: entrenador (objeto Entrenador).
+# Salidas: Asigna un entrenador a la selección.
+# Restricciones: El entrenador debe existir.
     def fn_asignar_entrenador(self,entrenador):
         self.__entrenador=entrenador
         self.__recalcular_fuerza()
 
+
+        
+# Nombre: fn_registrar_resultado
+# Entradas: goles_favor (entero), goles_contra (entero), tarjetas_amarrillas (entero), tarjetas_rojas (entero).
+# Salidas: Actualiza las estadísticas de la selección.
+# Restricciones: Todos los valores deben ser enteros.
     def fn_registrar_resultado(self,goles_favor,goles_contra,tarjetas_amarrillas,tarjetas_rojas):
         
         self.__total_goles_favor += goles_favor
@@ -373,7 +672,10 @@ class Seleccion:
         self.__total_tarjetas_amarrillas +=tarjetas_amarrillas
         self.__total_tarjetas_rojas+=tarjetas_rojas
 
-
+# Nombre: __recalcular_fuerza
+# Entradas: Ninguna.
+# Salidas: Recalcula la fuerza de la selección.
+# Restricciones: Deben existir jugadores registrados.
     def __recalcular_fuerza(self):
         copia=list(self.__jugadores)
         total= self.__cantidad_jugadores
@@ -412,10 +714,20 @@ class Seleccion:
         self.__fuerza_equipo=((promedio_titulares * 0.6) +(factor_entrenador  * 0.25) +(factor_ranking * 0.15))
         #ya se calculo dout
 
+        
+# Nombre: fn_calcular_fuerza_equipo
+# Entradas: Ninguna.
+# Salidas: Devuelve la fuerza actual de la selección.
+# Restricciones: El objeto debe estar inicializado.
     def fn_calcular_fuerza_equipo(self):
         self.__recalcular_fuerza()
         return self.__fuerza_equipo
-    
+
+
+# Nombre: fn_valida_para_jugar
+# Entradas: Ninguna.
+# Salidas: Indica si la selección puede participar.
+# Restricciones: Debe tener entrenador y al menos 11 jugadores.
     def fn_valida_para_jugar(self):
         tiene_entrenador  =self.__entrenador is not None #funcionan igaul qu el if estoy usando modo c++
         tiene_once =self.__cantidad_jugadores >= self.MINIMO_JUGADORES
@@ -451,6 +763,11 @@ class Partido:
         self.penales1 = 0
         self.penales2 = 0
 
+
+# Nombre: simular
+# Entradas: Ninguna.
+# Salidas: Simula el resultado del partido.
+# Restricciones: Ambos equipos deben estar preparados para jugar.
     def simular(self):
         fuerza1 = self.equipo_1.fn_calcular_fuerza_equipo()
         fuerza2 = self.equipo_2.fn_calcular_fuerza_equipo()
@@ -480,8 +797,8 @@ class Partido:
         # Actualizar estadísticas de las selecciones
         self.equipo_1.fn_registrar_resultado(self.goles_equipo1,self.goles_equipo2,0,0)
         self.equipo_2.fn_registrar_resultado(self.goles_equipo2,self.goles_equipo1,0,0)
-        
-# Si es eliminatoria y hubo empate, ir a penales
+
+        # Si es eliminatoria y hubo empate, ir a penales
         if self.fase != "Grupos":
             if self.goles_equipo1 == self.goles_equipo2:
                 self.penales1 = random.randint(2,5)
@@ -490,6 +807,12 @@ class Partido:
                 while self.penales1 == self.penales2:
                     self.penales1 = random.randint(2,5)
                     self.penales2 = random.randint(2,5)
+
+                    
+# Nombre: generar_ganador
+# Entradas: Ninguna.
+# Salidas: Devuelve el equipo ganador o None si hay empate en grupos.
+# Restricciones: El partido debe haber sido simulado.
 
     def generar_ganador(self):
         if self.goles_equipo1 > self.goles_equipo2:
@@ -505,7 +828,12 @@ class Partido:
                 return self.equipo_1
             else:
                 return self.equipo_2
-        
+
+
+# Nombre: mostrar_resultado
+# Entradas: Ninguna.
+# Salidas: Devuelve una cadena con el marcador del partido.
+# Restricciones: El partido debe haber sido simulado.
     def mostrar_resultado(self):
         nombre1 = self.equipo_1.fn_nombre_del_pais()
         nombre2 = self.equipo_2.fn_nombre_del_pais()
@@ -533,23 +861,47 @@ class Grupo:
         self.__equipos = []
         self.__partidos = []
         
-
+# Nombre: nombre_grupo
+# Entradas: Ninguna.
+# Salidas: Devuelve el nombre del grupo.
+# Restricciones: El objeto debe estar inicializado.
     def nombre_grupo(self):
         return self.__nombre_grupo
+
+# Nombre: equipos
+# Entradas: Ninguna.
+# Salidas: Devuelve la lista de equipos.
+# Restricciones: El objeto debe estar inicializado.
+
 
     def equipos(self):
         return self.__equipos
 
+
+    
+# Nombre: partidos
+# Entradas: Ninguna.
+# Salidas: Devuelve la lista de partidos.
+# Restricciones: El objeto debe estar inicializado.
     def partidos(self):
         return self.__partidos
 
+
+
+# Nombre: agregar_equipo
+# Entradas: seleccion (objeto Selección).
+# Salidas: Agrega una selección al grupo.
+# Restricciones: El grupo puede tener máximo cuatro selecciones.
     def agregar_equipo(self, seleccion):
         if len(self.__equipos) >= 4:
             return False
         self.__equipos = self.__equipos + [seleccion]
         return True
 
-
+# Nombre: jugarPartidos
+# Entradas: Ninguna.
+# Salidas: Simula todos los partidos del grupo.
+# Restricciones: Deben existir al menos dos selecciones.
     def jugarPartidos(self):
         self.__partidos = []
         numero = 1
@@ -563,6 +915,11 @@ class Grupo:
 
                 numero += 1
 
+                
+# Nombre: calcularTabla
+# Entradas: Ninguna.
+# Salidas: Calcula la tabla de posiciones.
+# Restricciones: Los partidos deben haber sido jugados.
     def calcularTabla(self):
         tabla = []
 
@@ -583,9 +940,12 @@ class Grupo:
         self.tabla = tabla
         return tabla
         
-    
+# Nombre: obtener_clasificados
+# Entradas: Ninguna.
+# Salidas: Devuelve las dos selecciones clasificadas.
+# Restricciones: La tabla debe estar calculada.    
     def obtener_clasificados(self):
-        # Calculamos la tabla primero
+        
         tabla = self.calcularTabla()  # cada fila: [equipo, puntos, diferencia]
 
         cantidad = len(tabla) #contador
@@ -613,6 +973,12 @@ class Grupo:
         clasificados = [tabla[0][0], tabla[1][0]]
         return clasificados
 
+
+
+# Nombre: mostrar_tabla
+# Entradas: Ninguna.
+# Salidas: Devuelve una cadena con la tabla de posiciones.
+# Restricciones: Debe existir al menos una selección.
     def mostrar_tabla(self):
         texto= ("=== " + self.__nombre_grupo + " ===") #titulo con nombre del grupo
             
@@ -646,6 +1012,8 @@ class Grupo:
             texto += (str(posicion)+ ". "+ equipo.fn_nombre_del_pais()+ "  Pts:"+ str(puntos)+ "  DG:"+ str(diferencia)+ "\n")
             posicion += 1
         return texto
+
+    
 """ Nombre: Fase
  Entradas: Nombre de la fase eliminatoria.
  Salidas: Crea una fase que almacena los partidos correspondientes.
@@ -656,6 +1024,12 @@ class Fase:
         self.nombre_fase = nombre_fase
         self.partidos = []
 
+
+# Nombre: registrar_juego
+# Entradas: equipo1 (Selección), equipo2 (Selección).
+# Salidas: Registra un partido de la fase.
+# Restricciones: Ambos equipos deben existir.
+
     def registrar_juego(self, equipo1, equipo2):
         nuevo_id = len(self.partidos) + 1
         partido = Partido(nuevo_id, equipo1, equipo2, self.nombre_fase, "")
@@ -663,11 +1037,20 @@ class Fase:
         self.partidos = self.partidos + [partido]
 
 
+
+# Nombre: jugar_fase
+# Entradas: Ninguna.
+# Salidas: Simula todos los partidos de la fase.
+# Restricciones: Deben existir partidos registrados.
     def jugar_fase(self):
         for partido in self.partidos:
             partido.simular()
 
 
+# Nombre: mostrar_juegos
+# Entradas: Ninguna.
+# Salidas: Devuelve una cadena con los resultados de la fase.
+# Restricciones: Los partidos deben haberse registrado.
     def mostrar_juegos(self):
         texto = "=== " + self.nombre_fase + " ===\n"
 
@@ -677,6 +1060,10 @@ class Fase:
         return texto
 
 
+# Nombre: obtener_clasificados
+# Entradas: Ninguna.
+# Salidas: Devuelve los equipos clasificados a la siguiente fase.
+# Restricciones: Los partidos deben haber sido simulados.
     def obtener_clasificados(self):
         clasificados = []
 
@@ -706,15 +1093,28 @@ class Mundial:
         self.fases = []
         self.campeon = None
 
+        
+# Nombre: registrar_pais
+# Entradas: pais (objeto Pais).
+# Salidas: Agrega un país al mundial.
+# Restricciones: El país no debe estar registrado previamente.
     def registrar_pais(self, pais):
         if pais not in self.paises:
             self.paises = self.paises + [pais]
 
+            
+# Nombre: registrar_seleccion
+# Entradas: seleccion (objeto Seleccion).
+# Salidas: Agrega una selección al mundial.
+# Restricciones: La selección no debe estar registrada previamente.
     def registrar_seleccion(self, seleccion):
         if seleccion not in self.selecciones:
             self.selecciones = self.selecciones + [seleccion]
 
-
+# Nombre: crear_grupos
+# Entradas: cantidad_grupos (entero).
+# Salidas: Crea los grupos del mundial y distribuye las selecciones.
+# Restricciones: Debe existir una cantidad suficiente de selecciones.
     def crear_grupos(self, cantidad_grupos):
         self.grupos = []
         indice = 0
@@ -732,6 +1132,11 @@ class Mundial:
 
             self.grupos = self.grupos + [grupo]
 
+            
+# Nombre: jugar_fase_grupos
+# Entradas: Ninguna.
+# Salidas: Simula todos los partidos de la fase de grupos y devuelve los resultados.
+# Restricciones: Los grupos deben haber sido creados.
     def jugar_fase_grupos(self):
         texto = "=========== FASE DE GRUPOS ===========\n\n"
 
@@ -743,6 +1148,11 @@ class Mundial:
 
         return texto
 
+
+# Nombre: armar_fase_eliminatoria
+# Entradas: nombre_fase (texto), clasificados (lista de Seleccion).
+# Salidas: Crea una fase eliminatoria y registra los enfrentamientos.
+# Restricciones: La lista debe contener un número par de selecciones.
     def armar_fase_eliminatoria(self, nombre_fase, clasificados):
         fase = Fase(nombre_fase)
         i = 0
@@ -754,10 +1164,22 @@ class Mundial:
 
         return fase
 
+
+
+    
+# Nombre: jugar_fase_eliminatoria
+# Entradas: fase (objeto Fase).
+# Salidas: Simula la fase eliminatoria y devuelve los equipos clasificados.
+# Restricciones: La fase debe contener partidos registrados.
     def jugar_fase_eliminatoria(self, fase):
         fase.jugar_fase()
         return fase.obtener_clasificados()
 
+
+# Nombre: determinar_campeon
+# Entradas: Ninguna.
+# Salidas: Determina la selección campeona del mundial.
+# Restricciones: La fase de grupos debe haber finalizado.
     def determinar_campeon(self):
         clasificados = []
 
@@ -783,6 +1205,12 @@ class Mundial:
         if len(clasificados) > 0:
             self.campeon = clasificados[0]
 
+
+
+# Nombre: mostrar_tabla_general
+# Entradas: Ninguna.
+# Salidas: Devuelve las tablas de posiciones de todos los grupos.
+# Restricciones: Deben existir grupos registrados.
     def mostrar_tabla_general(self):
         texto = "========== TABLAS DE POSICIONES ==========\n\n"
 
@@ -792,6 +1220,11 @@ class Mundial:
             
         return texto
 
+    
+# Nombre: generar_reporte
+# Entradas: Ninguna.
+# Salidas: Genera un reporte completo del mundial cpn tablas, fases y campeón.
+# Restricciones: Debe existir información del torneo para generar el reporte.
     def generar_reporte(self):
         texto = ""
         texto += "=====================================\n"
@@ -868,11 +1301,20 @@ class Interfaz_Grafica:
     #  UTILIDADES GENERALES                                             
     # #####################################################
 
+
+# Nombre: __limpiar
+# Entradas: Ninguna.
+# Salidas: Elimina todos los componentes de la ventana actual.
+# Restricciones: La ventana debe estar inicializada.
     def __limpiar(self):
         
         for widget in self.__ventana.winfo_children():
             widget.destroy()
 
+# Nombre: __barra_nav
+# Entradas: titulo (texto).
+# Salidas: Muestra la barra de navegación con el título de la pantalla.
+# Restricciones: El título no debe estar vacío.
     def __barra_nav(self, titulo):
         
         barra = tk.Frame(self.__ventana, bg="#0a3d62", pady=8)#los codigos fueron preguntados a IA
@@ -888,6 +1330,11 @@ class Interfaz_Grafica:
                   bg=self.COLOR_BOTON, fg=self.COLOR_TEXTO, relief="flat",
                   font=("Arial", 9), padx=8, cursor="hand2").pack(side="right", padx=8)
 
+
+# Nombre: __boton
+# Entradas: padre (contenedor), texto (texto), comando (función), color (texto, opcional), ancho (entero).
+# Salidas: Crea y devuelve un botón con el estilo de la aplicación.
+# Restricciones: El contenedor debe existir y el comando debe ser válido.
     def __boton(self, padre, texto, comando, color=None, ancho=28):
         
         c = color if color else self.COLOR_BOTON#formato c++
@@ -898,19 +1345,35 @@ class Interfaz_Grafica:
                          activebackground=self.COLOR_BOTON_HOVER,#cuando pase mause que se torne
                          activeforeground=self.COLOR_TEXTO, cursor="hand2")#activite se busco ayuda como mostar para cuando esta activo
 
+
+
+# Nombre: __label
+# Entradas: padre (contenedor), texto (texto), bold (booleano), color (texto, opcional).
+# Salidas: Crea y devuelve una etiqueta.
+# Restricciones: El contenedor debe existir.
     def __label(self, padre, texto, bold=False, color=None):
         
         fuente = ("Arial", 10, "bold") if bold else ("Arial", 10)
         c = color if color else self.COLOR_TEXTO
         return tk.Label(padre, text=texto, bg=self.COLOR_PANEL,
-                        fg=c, font=fuente)
 
+
+                        fg=c, font=fuente)
+# Nombre: __entry
+# Entradas: padre (contenedor).
+# Salidas: Crea y devuelve un campo de texto.
+# Restricciones: El contenedor debe existir.
     def __entry(self, padre):
        
         return tk.Entry(padre, bg="#2d3748", fg=self.COLOR_TEXTO,
                         insertbackground=self.COLOR_TEXTO,
-                        relief="flat", font=("Arial", 10), width=28)
 
+
+                        relief="flat", font=("Arial", 10), width=28)
+# Nombre: __area_texto
+# Entradas: padre (contenedor), alto (entero).
+# Salidas: Crea y devuelve un área de texto con barra de desplazamiento.
+# Restricciones: El contenedor debe existir.
     def __area_texto(self, padre, alto=18):
        
         caja = scrolledtext.ScrolledText(padre, wrap=tk.WORD,
@@ -920,6 +1383,11 @@ class Interfaz_Grafica:
                                          height=alto, relief="flat")
         return caja
 
+
+# Nombre: __escribir_texto
+# Entradas: caja (área de texto), texto (cadena).
+# Salidas: Muestra el texto recibido dentro del área de texto.
+# Restricciones: El área de texto debe existir.
     def __escribir_texto(self, caja, texto):
         
         caja.config(state="normal")
@@ -927,6 +1395,11 @@ class Interfaz_Grafica:
         caja.insert(tk.END, texto)
         caja.config(state="disabled")
 
+        
+# Nombre: __frame_panel
+# Entradas: padre (contenedor, opcional).
+# Salidas: Crea y devuelve un panel con el diseño de la aplicación.
+# Restricciones: Si se proporciona un contenedor, este debe existir.
     def __frame_panel(self, padre=None):
        
         # Objetivo: crear frame con color de panel del tema
@@ -1030,6 +1503,11 @@ class Interfaz_Grafica:
         self.__txt_paises.pack(fill="both", expand=True)
         self.__actualizar_lista_paises()
 
+        
+# Nombre: __guardar_pais
+# Entradas: Ninguna.
+# Salidas: Registra un nuevo país con los datos ingresados por el usuario.
+# Restricciones: Todos los campos deben estar completos y el ranking debe estar entre 1 y 200.
     def __guardar_pais(self):
         
         try:
