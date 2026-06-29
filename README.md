@@ -26,5 +26,4 @@ Wendy Avellán Vado 2026800630
 
 # segunda bitacora  donde se realizo casi tdoo el proyecto:
 # https://github.com/kimb-torres/Proyecto_Taller_Programacion_3
-### Enlace del video:
-Recordar que el video debe ser público para ser visto por el profesor
+
