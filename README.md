@@ -9,7 +9,7 @@ Wendy Avellán Vado 2026800630
 ### Estado del proyecto: [Malo|Regular|Buena|MuyBuena|Excelente|Superior **]
 
 # Bitacora Github:
-/28/06/26--> 2am Finalización  de la clase país, persona,entrenador,futbolista,seleccion. Kimberly Torres
+/ 28/06/26--> 2am Finalización  de la clase país, persona,entrenador,futbolista,seleccion. Kimberly Torres
 
 
 28/06/26--> 3am Finalización de la clase partido, grupo,fase, Mundial. Wendy Vado
