@@ -13,8 +13,8 @@ Wendy Avellán Vado 2026800630
 28/06/26--> 3am Finalización de la clase partido, grupo,fase, Mundial. Wendy Vado
 28/06/26--> 8am Finalizacón de la interfaz grafica completa.  Kimberly Torres y Wendy Vado, repardido con toda la base y primeras 6 clases representadas por Kimberly y Mundial y los archivos txt por Wendy
 28/06/26--> 7:18 pm Actualización y agregación de comentarios Kimberly
-28/06/26-->
-# segunda bitacora :
+28/06/26--> 7:35 se subieron los archivos txt necesarios para la ejecución ,Kimberly
+# segunda bitacora  donde se realizo casi tdoo el proyecto:
 # https://github.com/kimb-torres/Proyecto_Taller_Programacion_3
 ### Enlace del video:
 Recordar que el video debe ser público para ser visto por el profesor
