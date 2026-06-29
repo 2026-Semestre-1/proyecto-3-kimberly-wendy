@@ -9,11 +9,21 @@ Wendy Avellán Vado 2026800630
 ### Estado del proyecto: [Malo|Regular|Buena|MuyBuena|Excelente|Superior **]
 
 # Bitacora Github:
-28/06/26--> 2am Finalización  de la clase país, persona,entrenador,futbolista,seleccion. Kimberly Torres
+/28/06/26--> 2am Finalización  de la clase país, persona,entrenador,futbolista,seleccion. Kimberly Torres
+
+
 28/06/26--> 3am Finalización de la clase partido, grupo,fase, Mundial. Wendy Vado
+
+
 28/06/26--> 8am Finalizacón de la interfaz grafica completa.  Kimberly Torres y Wendy Vado, repardido con toda la base y primeras 6 clases representadas por Kimberly y Mundial y los archivos txt por Wendy
+
+
 28/06/26--> 7:18 pm Actualización y agregación de comentarios Kimberly
+
+
 28/06/26--> 7:35 se subieron los archivos txt necesarios para la ejecución ,Kimberly
+
+
 # segunda bitacora  donde se realizo casi tdoo el proyecto:
 # https://github.com/kimb-torres/Proyecto_Taller_Programacion_3
 ### Enlace del video:
